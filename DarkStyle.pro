@@ -17,3 +17,8 @@ HEADERS += \
 RESOURCES += darkstyle.qrc
 
 DISTFILES += darkstyle.json
+
+unix {
+    target.path = /usr/lib
+    INSTALLS += target
+}
