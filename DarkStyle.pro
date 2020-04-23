@@ -4,8 +4,6 @@ TARGET = DarkStyle
 TEMPLATE = lib
 CONFIG += plugin
 
-DESTDIR = $$[QT_INSTALL_PLUGINS]/styles
-
 SOURCES += \
     DarkStyle.cpp \
     DarkStylePlugin.cpp
@@ -18,7 +16,5 @@ RESOURCES += darkstyle.qrc
 
 DISTFILES += darkstyle.json
 
-unix {
-    target.path = /usr/lib
-    INSTALLS += target
-}
+target.path = $$[QT_INSTALL_PLUGINS]/styles
+INSTALLS += target
